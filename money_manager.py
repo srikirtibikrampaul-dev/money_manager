@@ -1,13 +1,6 @@
-# ==========================================
-#          MONEY MANAGER
-#     Personal Finance Tracker
-# ==========================================
-
-# Lists to store income and expenses
 income_list = []
 expense_list = []
 
-# Categories for expenses
 categories = [
     "Food",
     "Transport",
@@ -17,9 +10,6 @@ categories = [
     "Bills",
     "Other"
 ]
-
-
-# Function to add income
 def add_income():
     amount = float(input("Enter income amount: ₹"))
     
@@ -31,7 +21,6 @@ def add_income():
     print("Income added successfully!")
 
 
-# Function to add expense
 def add_expense():
     amount = float(input("Enter expense amount: ₹"))
 
@@ -62,12 +51,10 @@ def add_expense():
     print("Expense added successfully!")
 
 
-# Function to calculate total income
 def total_income():
     return sum(income_list)
 
 
-# Function to calculate total expenses
 def total_expense():
     total = 0
 
@@ -77,7 +64,6 @@ def total_expense():
     return total
 
 
-# Function to show category-wise expenses
 def category_summary():
     print("\n========== CATEGORY SUMMARY ==========")
 
@@ -92,7 +78,6 @@ def category_summary():
             print(category, ": ₹", total)
 
 
-# Function to find highest expense
 def highest_expense():
     if len(expense_list) == 0:
         print("No expenses recorded yet.")
@@ -109,7 +94,6 @@ def highest_expense():
     print("Amount   : ₹", highest["amount"])
 
 
-# Function to display all expenses
 def show_expenses():
     if len(expense_list) == 0:
         print("No expenses recorded yet.")
@@ -127,7 +111,6 @@ def show_expenses():
         )
 
 
-# Function to display complete summary
 def financial_summary():
     income = total_income()
     spending = total_expense()
@@ -149,12 +132,11 @@ def financial_summary():
         print("Status         : You have exceeded your income.")
 
 
-# Main program
 while True:
 
     print("\n")
     print("====================================")
-    print("          💰 MONEY MANAGER")
+    print("           MONEY MANAGER")
     print("====================================")
     print("1. Add Income")
     print("2. Add Expense")
